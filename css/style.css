@@ -1,0 +1,235 @@
+/* 第一区域 */
+header {
+    background: #B2C5CC;
+    height: 100%;
+    text-align: center;
+}
+header > nav{
+    height: 50px;
+    padding: 40px;
+}
+header > nav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0px auto;
+}
+header > nav > ul > li {
+    font-size: 20px;
+}
+header > nav > ul > li > a {
+    color: #757575;
+    transition: color 1s ease;
+}
+header > nav > ul > li > a:hover {
+    color: #afafaf;
+
+}
+header > nav > ul > li > .active {
+    color: #afafaf;
+}
+header > .mobile,
+header > .mobileNav {
+    visibility: hidden;
+}
+header > .logo {
+    margin: 20px auto;
+}
+header > .logo > span {
+    display: block;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 40px;
+}
+header > input {
+    width: 180px;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 0;
+    margin-top: 50px;
+    font-size: 20px;
+    transition: background 1s ease;
+}
+header > input:hover {
+    background: #afafaf;
+}
+
+
+/* 第二区域 */
+.part2 {
+    height: 80px;
+    border-bottom: 1px solid #bababa;
+}
+.part2 > nav {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-around;
+}
+.part2 > nav > span {
+    line-height: 80px;
+    color: #bababa;
+    cursor: pointer;
+    transition: color 1s ease;
+}
+.part2 > nav > span:hover {
+    color: #545454;
+}
+
+
+/* 第三区域 */
+article > div {
+    height: 300px;
+    width: 540px;
+    margin: 100px auto;
+}
+article > div > h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* 第四区域 */
+.part4 {
+    height: 80px;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+.part4 > span {
+    font-size: 20px;
+}
+.part4 > a {
+    font-size: 15px;
+}
+
+
+/* 第五区域 */
+.part5 {
+    background: url("../image/bg.jpg") no-repeat;
+    background-size: cover;
+    padding: 70px 30px;
+}
+.part5 > h2 {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.part5 > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.part5 > div > img {
+    width: 30%;
+    height: 250px;
+    margin: 10px;
+    transition: transform .3s;
+}
+.part5 > div > img:hover {
+    transform: scale(1.05);
+
+}
+
+
+/* 第六区域 */
+footer {
+    height: 80px;
+    background: #f4f4f4;
+    text-align: center;
+}
+footer > p {
+    font-size: 20px;
+    color: #000;
+    line-height: 80px;
+}
+
+
+/* iphone6尺寸适配界面 */
+@media screen and (max-width: 375px) {
+
+
+    /* 第一区域：隐藏原来的导航条并增加新的导航条 */
+    header > nav {
+        visibility: hidden;
+    }
+    header > .mobile {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        background: #7EA6B1;
+        top: 0px;
+        visibility: visible;
+        z-index: 1;
+    }
+    header > .mobile > button {
+        width: 15px;
+        height: 15px;
+        background: #7EA6B1;
+        border: 1px solid #B2C5CC;
+        border-radius: 0;
+        position: absolute;
+        right: 15px;
+        top: 17.5px;
+    }
+    header > .mobileNav {
+        visibility: visible;
+        position: absolute;
+        top: -200px;
+        width: 100%;
+        transition: top .5s;
+    }
+    header > .mobileNav > ul > li {
+        background: #7EA6B1;
+        padding: 3px;
+        border-bottom: 1px solid #B2C5CC;
+        color: #fff;
+    }
+
+
+    /* 第二区域：改变字体大小 */
+    .part2 > nav {
+        font-size: 10px;
+    }
+
+
+    /* 第三区域：改变字体大小 */
+    article > div {
+        width: 70%;
+        font-size: 8px;
+    }
+
+
+    /* 第四区域：调整内容位置 */
+    .part4 {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .part4 > a {
+        margin-top: 5px;
+    }
+
+
+    /* 第五区域：调整图片大小布局 */
+    .part5 {
+        padding: 70px 10px;
+    }
+    .part5 > h2 {
+        font-size: 10px;
+    }
+    .part5 > div > img {
+        width: 43%;
+        height: 90px;
+        margin: 10px;
+    }
+
+
+    /* 第六区域：调整字体大小 */
+    footer > p {
+        font-size: 10px;
+    }
+}
